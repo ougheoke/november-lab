@@ -8,9 +8,10 @@ app.set('view engine', 'ejs');
 
 let myName = 'Omonegho';
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
 //   res.send('<!DOCTYPE html><html lang="en"><h1>Hello World, is it November?</h1>')
-
+  let result = await res.send(`<h3> Hi, ${ myName }</h3>`);
+  console.log(myName);
 // res.send(`<h3> Hi, ${ myName }</h3>`)
 
 })
@@ -19,8 +20,14 @@ app.get('/show', (req, res) => {
     // res.sendFile('index.html' , { root : __dirname});
   })
 
+  console.log('before app dot get to /ejs')
+
 app.get('/ejs', (req, res) => {
     res.render('index');
+})
+
+app.get('/name', (req, res) => {
+  console.log("in get to /name:", req.query.ejsFormName)
 })
 
 console.log('in the node console');
