@@ -17,7 +17,7 @@ app.get('/', async (req, res) => {
 })
 
 app.get('/show', (req, res) => {
-    // res.sendFile('index.html' , { root : __dirname});
+  res.sendFile('index.html' , { root : __dirname});
   })
 
   console.log('before app dot get to /ejs')
