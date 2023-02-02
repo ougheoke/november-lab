@@ -21,5 +21,6 @@
   "bugs": {
     "url": "https://github.com/ougheoke/november-lab/issues"
   },
-  "homepage": "https://github.com/ougheoke/november-lab#readme"
+  "homepage": "https://github.com/ougheoke/november-lab#readme",
+  "devDependencies": {}
 }
