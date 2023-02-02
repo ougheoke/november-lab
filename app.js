@@ -27,13 +27,16 @@ app.get('/ejs', (req, res) => {
   //use res.render to load up an ejs view file
 
   console.log("in res render /ejs:", myName);
-    res.render('index',{ myName: myName}); // left one is ejs, right is node
+    res.render('index', { myName: myName}); // left one is ejs, right is node
     console.log("after res render /ejs:", myName);
 })
 
 app.get('/name', (req, res) => {
   console.log("in get to /name:", req.query.ejsFormName)
+  myName = req.query.ejsFormName;
 })
+
+console.log("after app dot get to slash ejs", myName);
 
 console.log('in the node console');
 
